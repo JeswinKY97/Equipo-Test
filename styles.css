@@ -1,0 +1,375 @@
+:root {
+  --blue-theme: rgb(41, 128, 185);
+  --black: #252525;
+  --label: #a5a5a5;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+.main-head {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--blue-theme);
+}
+@media only screen and (max-width: 768px) {
+  .main-head {
+    text-align: center;
+  }
+}
+
+.form-section {
+  width: 40%;
+  height: 100vh;
+  background-color: white;
+  padding: 0 100px;
+  gap: 35px;
+}
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-section .form-group {
+  font-size: 14px;
+}
+.form-section .form-group label {
+  margin-bottom: 10px;
+  color: var(--label);
+}
+.form-section .form-control {
+  height: 48px;
+}
+.form-section .login-btn {
+  height: 48px;
+  border: none;
+  background-color: var(--blue-theme);
+  color: white;
+  border-radius: 8px;
+  margin-top: 24px;
+  transition: background-color 0.5s ease;
+}
+.form-section .login-btn:hover {
+  background-color: #165d8b;
+}
+@media only screen and (max-width: 768px) {
+  .form-section {
+    width: 100%;
+    padding: 40px;
+    background: #d8f4ff;
+  }
+}
+
+.login-logo {
+  width: 150px;
+  padding-left: 25px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .login-logo {
+    position: static;
+  }
+}
+
+.register-logo {
+  width: 150px;
+  position: absolute;
+  top: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .register-logo {
+    position: static;
+    margin: 0 auto;
+  }
+}
+
+.user-logo {
+  width: 150px;
+  padding: 16px 0;
+  margin-left: 25px;
+  margin-bottom: 32px;
+}
+
+.login-background img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+.login-background .login-overlay {
+  background: linear-gradient(to top, rgb(41, 128, 185), rgba(255, 255, 255, 0));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.login-background .login-overlay span {
+  position: absolute;
+  color: white;
+  bottom: 50px;
+  right: 50px;
+  text-align: right;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 768px) {
+  .login-background {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #ecf2ff;
+  color: var(--black);
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.navbar {
+  display: none;
+}
+.navbar img {
+  height: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+  }
+}
+
+.mob-menu a {
+  color: var(--black) !important;
+  text-decoration: none !important;
+  text-align: center;
+  padding: 7px;
+}
+.mob-menu a:hover {
+  color: var(--blue-theme) !important;
+  font-weight: 700;
+}
+
+/* Logo styles */
+.logo {
+  padding: 20px;
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--blue-theme);
+}
+
+/* Menu styles */
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 15px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.menu li:hover {
+  background-color: #e2e8ff;
+}
+.menu li:hover a {
+  color: var(--blue-theme);
+}
+
+.menu li a {
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu li a i {
+  font-size: 21px;
+}
+
+.logout {
+  padding: 20px 25px;
+  border-top: 1px solid #dfdfdf;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.logout:hover {
+  background-color: #e2e8ff;
+  color: var(--blue-theme);
+}
+
+.content {
+  width: calc(100% - 250px);
+  padding: 20px;
+  position: relative;
+  background-color: ghostwhite;
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Breadcrumbs styles */
+.breadcrumbs {
+  padding: 10px 0;
+  margin-bottom: 35px;
+}
+
+.breadcrumbs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.breadcrumbs ul li {
+  display: inline;
+  color: #a5a5a5;
+}
+.breadcrumbs ul li:last-of-type {
+  color: var(--blue-theme);
+  font-weight: 600;
+}
+.breadcrumbs ul li:not(:last-of-type)::after {
+  content: "/";
+  margin: 0 5px;
+  color: #a5a5a5;
+}
+
+.breadcrumbs ul li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs ul li a {
+  text-decoration: none;
+  color: #a5a5a5;
+}
+
+.breadcrumbs ul li a:hover {
+  text-decoration: underline;
+}
+
+.user-details-section {
+  gap: 24px;
+}
+.user-details-section .user-details-part {
+  gap: 24px;
+  width: calc(100vw - 564px);
+}
+@media only screen and (max-width: 768px) {
+  .user-details-section .user-details-part {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .user-details-section {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.details-card {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 24px;
+  background: white;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0.04);
+}
+.details-card h3 {
+  margin-bottom: 24px;
+  color: var(--blue-theme);
+}
+
+.profile-card {
+  width: 250px;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+.profile-card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.profile-card .profile-name {
+  font-size: 25px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .profile-card {
+    position: static;
+    width: 100%;
+  }
+}
+
+.details-wrap {
+  gap: 20px;
+}
+
+.details {
+  width: 20%;
+}
+.details .detail-label {
+  font-weight: 400;
+  color: var(--label);
+}
+.details .detail-value {
+  font-weight: 500;
+  color: #6a80d1;
+}
+@media only screen and (max-width: 768px) {
+  .details {
+    width: 200px;
+  }
+}
+
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.appointment-table th, .appointment-table td {
+  border: 1px solid #efefef;
+  padding: 8px;
+  text-align: left;
+}
+
+.appointment-table th {
+  background-color: #e8f4ff;
+}/*# sourceMappingURL=styles.css.map */
